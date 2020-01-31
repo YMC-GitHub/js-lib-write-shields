@@ -2,9 +2,9 @@
   "name": "write-shields",
   "version": "1.0.0",
   "description": "write shields for github repo in readme.md",
-  "main": "lib/js-lib-write-shields.common.js",
-  "module": "lib/js-lib-write-shields.esm.js",
-  "unpkg": "lib/js-lib-write-shields.js",
+  "main": "lib/write-shields.common.js",
+  "module": "lib/write-shields.esm.js",
+  "unpkg": "lib/write-shields.js",
   "scripts": {
     "dev": "nodemon --legacy-watch --config config/nodemon.config.json",
     "build": "node build/rollup.pro.config.js",
