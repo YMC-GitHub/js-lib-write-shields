@@ -1,30 +1,28 @@
 const fs = require('fs');
 const path = require('path');
-
-exports.mkdirsSync = function(dirname) {
+export const mkdirsSync = function _mkdirsSync(dirname) {
   // has dir?
   if (fs.existsSync(dirname)) {
     return true;
   }
   // does not?create dir
-  if (exports.mkdirsSync(path.dirname(dirname))) {
+  if (_mkdirsSync(path.dirname(dirname))) {
     fs.mkdirSync(dirname);
     return true;
   }
 };
 
+export const startWithSmall = x => x.charAt(0).toLowerCase() + x.slice(1);
+
 // exports.camelCase = x => x.charAt(0).toUpperCase() + x.slice(1).toLowerCase()
-exports.camelCase = str =>
-  exports.startWithSmall(
+export const camelCase = str =>
+  startWithSmall(
     str
       .split(/[_.-]/)
       .map(x => x.charAt(0).toUpperCase() + x.slice(1).toLowerCase())
       .join('')
   );
-
-exports.startWithSmall = x => x.charAt(0).toLowerCase() + x.slice(1);
-exports.funcName = exports.camelCase;
-
-exports.readyPromise = function() {
+export const funcName = camelCase;
+export const readyPromise = function() {
   return Promise.resolve();
 };

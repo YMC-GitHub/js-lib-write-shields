@@ -1,7 +1,8 @@
 // include some lib
 const fs = require('fs');
 const path = require('path');
-const utils = require('./utils');
+import * as utils from './utils';
+// const utils = require('./utils');
 
 const rootPath = path.resolve(__dirname, '..');
 // eslint-disable-next-line no-unused-vars
