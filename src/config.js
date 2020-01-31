@@ -4,7 +4,7 @@ const path = require('path');
 import * as utils from './utils';
 // const utils = require('./utils');
 
-const rootPath = path.resolve(__dirname, '..');
+const rootPath = process.cwd();
 // eslint-disable-next-line no-unused-vars
 const resolve = file => path.resolve(rootPath, file);
 
