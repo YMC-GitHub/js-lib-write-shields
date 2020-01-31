@@ -9,7 +9,8 @@ write shields for github repo in readme.md
 ### install
 
 ```sh
-npm install write-shields --save-dev
+#npm install write-shields --save-dev
+npm install https://github.com/YMC-GitHub/js-lib-write-shields.git --save-dev
 ```
 
 ### config
